@@ -8,13 +8,13 @@
 <body>
     <h1>QR Code Generator</h1>
     <form action="{{ url_for('generate_qrcode') }}" method="post" enctype="multipart/form-data">
-        <label for="text">Enter text or URL:</label>
+        <label for="text">输入文字或链接:</label>
         <input type="text" id="text" name="text" required>
         <br>
-        <label for="icon">Upload icon (optional):</label>
+        <label for="icon">上传 icon (可选):</label>
         <input type="file" id="icon" name="icon" accept="image/*">
         <br>
-        <button type="submit">Generate QR Code</button>
+        <button type="submit">生成二维码</button>
     </form>
     <br>
     {% if qr_code %}
